@@ -21,6 +21,10 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "leva": "^0.9.35",
+    "r3f-perf": "^7.1.2"
+  },
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",

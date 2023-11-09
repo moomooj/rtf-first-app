@@ -2,6 +2,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createGlobalStyle } from "styled-components";
 import { Canvas } from "@react-three/fiber";
+import React from "react";
+import { Leva } from "leva";
 
 const GolbalStyle = createGlobalStyle`
 
@@ -76,16 +78,19 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <>
-    <GolbalStyle />
-    <Canvas
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
-      }}
-    >
-      <App />
-    </Canvas>
+    <React.StrictMode>
+      <GolbalStyle />
+      <Leva collapsed />
+      <Canvas
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-4, 3, 6],
+        }}
+      >
+        <App />
+      </Canvas>
+    </React.StrictMode>
   </>
 );
