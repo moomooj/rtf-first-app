@@ -40,7 +40,7 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #d15e5e;
+  background: ivory;
 }
 menu, ol, ul {
   list-style: none;
@@ -78,8 +78,12 @@ root.render(
   <>
     <GolbalStyle />
     <Canvas
-      dpr={[1, 2]}
-      camera={{ fov: 45, near: 0.1, far: 200, position: [3, 2, 6] }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6],
+      }}
     >
       <App />
     </Canvas>
