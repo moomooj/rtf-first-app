@@ -42,7 +42,6 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: ivory;
 }
 menu, ol, ul {
   list-style: none;
@@ -76,12 +75,14 @@ a {
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <>
     <React.StrictMode>
       <GolbalStyle />
       <Leva collapsed />
       <Canvas
+        shadows
         camera={{
           fov: 45,
           near: 0.1,
